@@ -1,0 +1,7 @@
+cvlib==0.2.7
+kivy==2.1.0
+numpy==1.22.4
+nxt==0.1
+opencv_python==4.5.5.62
+redis==4.2.2
+~~mpy==1.19.2
