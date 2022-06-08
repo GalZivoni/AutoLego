@@ -1,0 +1,210 @@
+#connected to kivyClient4Moodle
+Mimshak:
+<Mimshak>:
+	ip:name
+	orientation:'vertical'
+	BoxLayout:
+		size_hint_y:0.01
+		padding:'5dp'
+		spacing:'5dp'
+		Label:
+			text:'Redis IP address:'
+		TextInput:
+			id:name
+		ToggleButton:
+			text:'Start'
+			on_press:root.redis_address()
+	BoxLayout:
+		size_hint_y:0.01
+
+	BoxLayout:
+		padding:'5dp'
+		spacing:'5dp'
+		size_hint_y:0.03
+		Button:
+			text:'Computer 1'
+			background_normal:'comp.png'
+			on_press:root.choosecomp("comp1",root.r)
+
+		Button:
+			text:'Computer 2'
+			background_normal:'comp.png'
+			on_press:root.choosecomp("comp2",root.r)
+		Button:
+			text:'Computer 3'
+			background_normal:'comp.png'
+			on_press:root.choosecomp("comp3",root.r)
+	BoxLayout:
+		size_hint_y:0.02
+
+		
+
+<Comp1>:
+	computer1:computer1
+	orientation:'vertical'
+	BoxLayout:
+		size_hint_y:0.01
+		Label:
+			font_size:'30dp'
+			id:computer1
+			text:'Computer 1:\nChoose your action'
+			
+	BoxLayout:
+		size_hint_y:0.01
+		padding:'5dp'
+		spacing:'5dp'
+		Label:
+			text:'Drive'
+		Label:
+			text:'Stop'
+		Label:
+			text:'Turbo'
+		Label:
+			text:'Circle'
+		Label:
+			text:'Music'
+			
+	BoxLayout:
+		size_hint_y:0.012
+		size_hint_x:1
+		padding:'5dp'
+		spacing:'5dp'
+		Button:
+			background_normal:'checked.png'
+			on_press: root.write_to_redis("comp1","drive")
+		Button:
+			background_normal:'banned.png'
+			on_press: root.write_to_redis("comp1","stop")
+		Button:
+			background_normal:'rocket.png'
+			on_press: root.write_to_redis("comp1","turbo")
+		Button:
+			background_normal:'arrow-circle.png'
+			on_press: root.write_to_redis("comp1","circle")
+		Button:
+			background_normal:'musical-note.png'
+			on_press: root.write_to_redis("comp1","music")
+	BoxLayout:
+		size_hint_y:0.015
+	BoxLayout:
+		padding:'5dp'
+		spacing:'5dp'
+		size_hint_y:0.01
+		size_hint_x:0.15
+		Button:
+			text:'Back'
+			on_press:root.main_screen()
+
+<Comp2>:
+	computer1:computer1
+	orientation:'vertical'
+	BoxLayout:
+		size_hint_y:0.01
+		Label:
+			font_size:'30dp'
+			id:computer1
+			text:'Computer 2:\nChoose your action'
+
+	BoxLayout:
+		size_hint_y:0.01
+		padding:'5dp'
+		spacing:'5dp'
+		Label:
+			text:'Drive'
+		Label:
+			text:'Stop'
+		Label:
+			text:'Turbo'
+		Label:
+			text:'Circle'
+		Label:
+			text:'Music'
+
+	BoxLayout:
+		size_hint_y:0.012
+		size_hint_x:1
+		padding:'5dp'
+		spacing:'5dp'
+		Button:
+			background_normal:'checked.png'
+			on_press: root.write_to_redis("comp2","drive")
+		Button:
+			background_normal:'banned.png'
+			on_press: root.write_to_redis("comp2","stop")
+		Button:
+			background_normal:'rocket.png'
+			on_press: root.write_to_redis("comp2","turbo")
+		Button:
+			background_normal:'arrow-circle.png'
+			on_press: root.write_to_redis("comp2","circle")
+		Button:
+			background_normal:'musical-note.png'
+			on_press: root.write_to_redis("comp2","music")
+	BoxLayout:
+		size_hint_y:0.015
+	BoxLayout:
+		padding:'5dp'
+		spacing:'5dp'
+		size_hint_y:0.01
+		size_hint_x:0.15
+		Button:
+			text:'Back'
+			on_press:root.main_screen()
+
+<Comp3>:
+	computer1:computer1
+	orientation:'vertical'
+	BoxLayout:
+		size_hint_y:0.01
+		Label:
+			font_size:'30dp'
+			id:computer1
+			text:'Computer 3:\nChoose your action'
+
+	BoxLayout:
+		size_hint_y:0.01
+		padding:'5dp'
+		spacing:'5dp'
+		Label:
+			text:'Drive'
+		Label:
+			text:'Stop'
+		Label:
+			text:'Turbo'
+		Label:
+			text:'Circle'
+		Label:
+			text:'Music'
+
+	BoxLayout:
+		size_hint_y:0.012
+		size_hint_x:1
+		padding:'5dp'
+		spacing:'5dp'
+		Button:
+			background_normal:'checked.png'
+			on_press: root.write_to_redis("comp3","drive")
+		Button:
+			background_normal:'banned.png'
+			on_press: root.write_to_redis("comp3","stop")
+		Button:
+			background_normal:'rocket.png'
+			on_press: root.write_to_redis("comp3","turbo")
+		Button:
+			background_normal:'arrow-circle.png'
+			on_press: root.write_to_redis("comp3","circle")
+		Button:
+			background_normal:'musical-note.png'
+			on_press: root.write_to_redis("comp3","music")
+	BoxLayout:
+		size_hint_y:0.015
+	BoxLayout:
+		padding:'5dp'
+		spacing:'5dp'
+		size_hint_y:0.01
+		size_hint_x:0.15
+		Button:
+			text:'Back'
+			on_press:root.main_screen()
+
+
